@@ -6,10 +6,10 @@ import com.alsis.pageor.HomePageOR;
 import com.aventstack.extentreports.ExtentTest;
 
 public class HomePage extends HomePageOR {
-	
-	public HomePage(WebDriver driver,ExtentTest test) {
-		super(driver,test);
-		
+
+	public HomePage(WebDriver driver, ExtentTest test) {
+		super(driver, test);
+
 	}
 
 }

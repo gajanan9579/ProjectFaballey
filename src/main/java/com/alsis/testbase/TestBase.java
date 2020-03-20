@@ -54,7 +54,7 @@ public class TestBase extends Base {
 	 }
 
 	@BeforeMethod
-	public void openBrowser(Method method) {
+	public void openBrowser(Method method) throws InterruptedException {
 		String browserName = prop.getProperty("browser");
 		if (browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver","C:\\workspaceProject\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\driver\\chromedriver78.exe");
@@ -63,7 +63,7 @@ public class TestBase extends Base {
 
 		} else if (browserName.equals("firefox")) {
 
-			System.setProperty("webdriver.geckodriver.driver","C:\\workspaceProject\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\driver\\gecodriver.exe");
+			System.setProperty("webdriver.geckodriver.driver","C:\\workspaceProject\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\driver\\geckodriver64bit.exe");
 
 			driver = new FirefoxDriver();
 		}
@@ -77,6 +77,7 @@ public class TestBase extends Base {
 		 * TimeUnit.SECONDS);
 		 */
 		driver.get(prop.getProperty("url"));
+		Thread.sleep(10000);
 		childtest=parenttest.createNode(method.getName());
 		test1=childtest;
 		
