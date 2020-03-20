@@ -8,7 +8,7 @@ public class App2 extends TestBase{
 	
 	@Test
 	public void m3(){
-		System.out.println(driver.getPageSource());
+		System.out.println(driver.getTitle());
 	}
 
 }
