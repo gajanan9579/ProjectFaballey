@@ -16,7 +16,7 @@ public class HomepageTest extends TestBase {
 		Thread.sleep(3000);
 		
 		driver.findElement(By.xpath("//a[@class='btnNoThanks']")).click();
-		Assert.assertTrue(CompeareText.compare(driver, hp.headofficeaddress,"E:\\J.B.K\\FaballeyFinal\\Headofficeaddress1.txt"));
+		Assert.assertTrue(CompeareText.compare(driver, hp.headofficeaddress,"Headofficeaddress1.txt"));
 
 	}
 
@@ -26,7 +26,7 @@ public class HomepageTest extends TestBase {
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[@class='btnNoThanks']")).click();
 
-		Assert.assertTrue(CompeareText.compare(driver, hp.returnadd,"E:\\J.B.K\\FaballeyFinal\\Returnadd.txt"));
+		Assert.assertTrue(CompeareText.compare(driver, hp.returnadd,"Returnadd.txt"));
 
 	}
 }
