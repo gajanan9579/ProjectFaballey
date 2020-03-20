@@ -6,6 +6,7 @@
       <class name="com.alsis.App"/>
       <class name="com.alsis.App1"/>
       <class name="com.alsis.App2"/>
+       <class name="com.alsis.HomepageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

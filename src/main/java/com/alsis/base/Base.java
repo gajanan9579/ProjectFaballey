@@ -28,7 +28,7 @@ public class Base {
 
 			// log4j
 			log = Logger.getLogger(Base.class);
-			PropertyConfigurator.configure("C:\\workspaceProject\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\propertiesfile\\log4j.properties");
+			PropertyConfigurator.configure("C:\\workspaceProject\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\propertiesfile\\log.properties");
 
 			log.info("currDir is : " + currDir);
 
