@@ -2,6 +2,7 @@ package com.alsis.testbase;
 
 import java.lang.reflect.Method;
 import java.util.Date;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +16,9 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
 
 import com.alsis.base.Base;
+import com.alsis.pages.HomePage;
+import com.alsis.util.ExcelReadWrite;
+import com.alsis.util.MenuUtil;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -28,9 +32,9 @@ public class TestBase extends Base {
 	public static ExtentHtmlReporter htmlreporter;
 	public static SoftAssert soft;
 	
-	 
 
 	public  WebDriver driver;
+	public  HomePage homePage;
 	
 	
 	
@@ -48,22 +52,22 @@ public class TestBase extends Base {
 	  
 	  }
 	 @BeforeClass
-	 public void parentSetup() {
+	 public void parentSetup() throws Exception {
 		 parenttest= extent.createTest(getClass().getSimpleName());
-		 
+		
 	 }
 
 	@BeforeMethod
 	public void openBrowser(Method method) throws InterruptedException {
 		String browserName = prop.getProperty("browser");
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver","C:\\workspaceProject\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\driver\\chromedriver78.exe");
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\hp\\git\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\driver\\chromedriver78.exe");
 
 			driver = new ChromeDriver();
 
 		} else if (browserName.equals("firefox")) {
 
-			System.setProperty("webdriver.geckodriver.driver","C:\\workspaceProject\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\driver\\geckodriver64bit.exe");
+			System.setProperty("webdriver.geckodriver.driver","C:\\Users\\hp\\git\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\driver\\geckodriver64bit.exe");
 
 			driver = new FirefoxDriver();
 		}
@@ -80,6 +84,7 @@ public class TestBase extends Base {
 		Thread.sleep(10000);
 		childtest=parenttest.createNode(method.getName());
 		test1=childtest;
+		homePage = new HomePage(driver,test1);
 		
 	}
 

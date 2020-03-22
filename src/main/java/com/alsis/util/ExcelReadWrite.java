@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -32,27 +34,28 @@ public class ExcelReadWrite {
 		excelSheet = excelWorkbook.getSheet(sheetName); // Your sheet name
 
 		// Find number of rows in excel file
-		System.out.println(
-				"First Row Number:- " + excelSheet.getFirstRowNum() + "Last Row Number:-" + excelSheet.getLastRowNum());
+		//System.out.println(
+		//		"First Row Number: " + excelSheet.getFirstRowNum() + "Last Row Number: " + excelSheet.getLastRowNum());
 
 		int rowCount = excelSheet.getLastRowNum() /*- excelSheet.getFirstRowNum()+1*/;
 		int colCount = excelSheet.getRow(0).getLastCellNum();
-		System.out.println("Row Count is:- " + rowCount + "Column count is:- " + colCount);
+		System.out.println("Row Count is: " + rowCount + "Column count is:  " + colCount);
 
-		Object data[][] = new Object[rowCount - 1][colCount];
+		Object data[][] = new Object[rowCount][colCount];
+		System.out.println("Size of arry= "+data.length);
 
-		for (int row = 2; row <= rowCount; row++) {
+		for (int row =2; row <= rowCount+1; row++) {
 			for (int col = 0; col < colCount; col++) {
 				System.out.print(getCellData(sheetName, col, row) + " "); // print
 																			// Your
 																			// sheet
-																			// name
-				data[row - 2][col] = getCellData(sheetName, col, row); // stored
-																		// Your
+				System.out.println("Before storing in to array");															// name
+				data[row-2][col] = getCellData(sheetName, col, row); // stored
+				System.out.println("After storing in to array");													// Your
 																		// sheet
 																		// name
 			}
-			System.out.println();
+			
 		}
 		return data;
 	}
@@ -87,6 +90,29 @@ public class ExcelReadWrite {
 			return "row " + rowNum + " or column " + colNum + " does not exist in xls";
 		}
 	}
+	
+	
+	public static List<String> getExcellist(String FileName, String SheetName) throws Exception {
+		List<String> excellist = null;
+		FileInputStream fis = new FileInputStream(FileName);
+		XSSFWorkbook wb = new XSSFWorkbook(fis);
+		XSSFSheet sh = wb.getSheet(SheetName);
+		int r = sh.getLastRowNum();
+		int c = sh.getRow(r).getLastCellNum();
+		excellist = new ArrayList<String>();
+		for (int i = 0; i < r; i++) {
+			for (int j = 0; j < c; j++) {
+				String excelvalue = sh.getRow(i + 1).getCell(j).toString();
+				excellist.add(excelvalue);
+				
+				/*
+				 * for(String a:excellist) { System.out.println(a); System.out.println(); }
+				 */
+			}
+		}
+		return excellist;
+	}
+
 
 	public void write_Data() throws Exception {
 		int num = 0;

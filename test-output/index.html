@@ -2,10 +2,9 @@
 
 <html>
   <head>
-  <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
     <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -49,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Balag\AppData\Local\Temp\testng-eclipse-1164001342\testng-customsuite.xml</span>
+                    <span>C:\Users\hp\AppData\Local\Temp\testng-eclipse-782824655\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,12 +101,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.alsis.HomepageTest" hash-for-method="checkHeadofficeAddress">checkHeadofficeAddress</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.alsis.HomepageTest" hash-for-method="testLinksCount">testLinksCount</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.alsis.HomepageTest" hash-for-method="checkReturnAddress">checkReturnAddress</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.alsis.HomepageTest" hash-for-method="testLinksSeq">testLinksSeq</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -130,16 +129,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="checkHeadofficeAddress">
-                  </a> <!-- checkHeadofficeAddress -->
-                  <span class="method-name">checkHeadofficeAddress</span>
+                  <a name="testLinksCount">
+                  </a> <!-- testLinksCount -->
+                  <span class="method-name">testLinksCount</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="checkReturnAddress">
-                  </a> <!-- checkReturnAddress -->
-                  <span class="method-name">checkReturnAddress</span>
+                  <a name="testLinksSeq">
+                  </a> <!-- testLinksSeq -->
+                  <span class="method-name">testLinksSeq</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -147,14 +146,14 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Balag\AppData\Local\Temp\testng-eclipse-1164001342\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\hp\AppData\Local\Temp\testng-eclipse-782824655\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.alsis.HomepageTest&quot;/&gt;
     &lt;/classes&gt;
@@ -198,18 +197,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'checkHeadofficeAddress')
+data.setCell(0, 1, 'testLinksSeq')
 data.setCell(0, 2, 'com.alsis.HomepageTest')
-data.setCell(0, 3, 3758);
+data.setCell(0, 3, 6707);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'checkReturnAddress')
+data.setCell(1, 1, 'testLinksCount')
 data.setCell(1, 2, 'com.alsis.HomepageTest')
-data.setCell(1, 3, 3359);
+data.setCell(1, 3, 2128);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -242,39 +241,47 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-suite before">
                 <span class="method-name">initialiseExtentReport</span>
-                <span class="method-start">170 ms</span>
+                <span class="method-start">108 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">parentSetup</span>
-                <span class="method-start">561 ms</span>
+                <span class="method-start">333 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">openBrowser(public void com.alsis.HomepageTest.checkHeadofficeAddress() throws java.lang.InterruptedException)</span>
-                <span class="method-start">592 ms</span>
+                <span class="method-name">openBrowser(public void com.alsis.HomepageTest.testLinksCount() throws java.lang.Exception)</span>
+                <span class="method-start">345 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loadMenuForTesting</span>
+                <span class="method-start">103083 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">checkHeadofficeAddress</span>
-                <span class="method-start">30747 ms</span>
+                <span class="method-name">testLinksCount</span>
+                <span class="method-start">103083 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">34508 ms</span>
+                <span class="method-start">105211 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">openBrowser(public void com.alsis.HomepageTest.checkReturnAddress() throws java.lang.InterruptedException)</span>
-                <span class="method-start">39293 ms</span>
+                <span class="method-name">openBrowser(public void com.alsis.HomepageTest.testLinksSeq() throws java.lang.Exception)</span>
+                <span class="method-start">109924 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loadMenuForTesting</span>
+                <span class="method-start">212443 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">checkReturnAddress</span>
-                <span class="method-start">65355 ms</span>
+                <span class="method-name">testLinksSeq</span>
+                <span class="method-start">212443 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">68716 ms</span>
+                <span class="method-start">219153 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">endReport</span>
-                <span class="method-start">73783 ms</span>
+                <span class="method-start">224119 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

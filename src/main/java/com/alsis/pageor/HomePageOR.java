@@ -1,7 +1,10 @@
 package com.alsis.pageor;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
 import com.alsis.pagebase.PageBase;
@@ -19,5 +22,8 @@ public class HomePageOR extends PageBase {
 
 	@FindBy(xpath = "//div[@class='ftrtnBox']")
 	public WebElement returnadd;
+	
+	@FindAll({ @FindBy(xpath = "//div[@class='menuCntr']/ul/li[@class]")})
+	public List<WebElement>weblist;
 
 }

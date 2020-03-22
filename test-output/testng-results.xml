@@ -1,63 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="73124" started-at="2020-03-20T11:38:20Z" finished-at="2020-03-20T11:39:33Z">
+  <suite name="Default suite" duration-ms="223750" started-at="2020-03-22T11:38:02Z" finished-at="2020-03-22T11:41:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="73124" started-at="2020-03-20T11:38:20Z" finished-at="2020-03-20T11:39:33Z">
+    <test name="Default test" duration-ms="223750" started-at="2020-03-22T11:38:02Z" finished-at="2020-03-22T11:41:46Z">
       <class name="com.alsis.HomepageTest">
-        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.alsis.HomepageTest@6950e31]" name="loadProperties" is-config="true" duration-ms="170" started-at="2020-03-20T11:38:20Z" finished-at="2020-03-20T11:38:20Z">
+        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.alsis.HomepageTest@1f983a6]" name="loadProperties" is-config="true" duration-ms="107" started-at="2020-03-22T17:08:01Z" finished-at="2020-03-22T17:08:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadProperties -->
-        <test-method status="PASS" signature="initialiseExtentReport()[pri:0, instance:com.alsis.HomepageTest@6950e31]" name="initialiseExtentReport" is-config="true" duration-ms="375" started-at="2020-03-20T11:38:20Z" depends-on-methods="com.alsis.base.Base.loadProperties" finished-at="2020-03-20T11:38:20Z">
+        <test-method status="PASS" signature="initialiseExtentReport()[pri:0, instance:com.alsis.HomepageTest@1f983a6]" name="initialiseExtentReport" is-config="true" duration-ms="217" started-at="2020-03-22T17:08:02Z" depends-on-methods="com.alsis.base.Base.loadProperties" finished-at="2020-03-22T17:08:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialiseExtentReport -->
-        <test-method status="PASS" signature="parentSetup()[pri:0, instance:com.alsis.HomepageTest@6950e31]" name="parentSetup" is-config="true" duration-ms="15" started-at="2020-03-20T11:38:20Z" finished-at="2020-03-20T11:38:20Z">
+        <test-method status="PASS" signature="parentSetup()[pri:0, instance:com.alsis.HomepageTest@1f983a6]" name="parentSetup" is-config="true" duration-ms="9" started-at="2020-03-22T17:08:02Z" finished-at="2020-03-22T17:08:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- parentSetup -->
-        <test-method status="PASS" signature="openBrowser(java.lang.reflect.Method)[pri:0, instance:com.alsis.HomepageTest@6950e31]" name="openBrowser" is-config="true" duration-ms="30155" started-at="2020-03-20T11:38:20Z" finished-at="2020-03-20T11:38:50Z">
+        <test-method status="PASS" signature="openBrowser(java.lang.reflect.Method)[pri:0, instance:com.alsis.HomepageTest@1f983a6]" name="openBrowser" is-config="true" duration-ms="102738" started-at="2020-03-22T17:08:02Z" finished-at="2020-03-22T17:09:45Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.alsis.HomepageTest.checkHeadofficeAddress() throws java.lang.InterruptedException]]>
+                <![CDATA[public void com.alsis.HomepageTest.testLinksCount() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="checkHeadofficeAddress()[pri:0, instance:com.alsis.HomepageTest@6950e31]" name="checkHeadofficeAddress" duration-ms="3758" started-at="2020-03-20T11:38:50Z" finished-at="2020-03-20T11:38:54Z">
+        <test-method status="PASS" signature="loadMenuForTesting()[pri:0, instance:com.alsis.HomepageTest@1f983a6]" name="loadMenuForTesting" is-config="true" duration-ms="0" started-at="2020-03-22T17:09:45Z" finished-at="2020-03-22T17:09:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkHeadofficeAddress -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.alsis.HomepageTest@6950e31]" name="closeBrowser" is-config="true" duration-ms="4785" started-at="2020-03-20T11:38:54Z" finished-at="2020-03-20T11:38:59Z">
+        </test-method> <!-- loadMenuForTesting -->
+        <test-method status="PASS" signature="testLinksCount()[pri:0, instance:com.alsis.HomepageTest@1f983a6]" name="testLinksCount" duration-ms="2128" started-at="2020-03-22T17:09:45Z" finished-at="2020-03-22T17:09:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLinksCount -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.alsis.HomepageTest@1f983a6]" name="closeBrowser" is-config="true" duration-ms="4712" started-at="2020-03-22T17:09:47Z" finished-at="2020-03-22T17:09:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser(java.lang.reflect.Method)[pri:0, instance:com.alsis.HomepageTest@6950e31]" name="openBrowser" is-config="true" duration-ms="26062" started-at="2020-03-20T11:38:59Z" finished-at="2020-03-20T11:39:25Z">
+        <test-method status="PASS" signature="openBrowser(java.lang.reflect.Method)[pri:0, instance:com.alsis.HomepageTest@1f983a6]" name="openBrowser" is-config="true" duration-ms="102519" started-at="2020-03-22T17:09:51Z" finished-at="2020-03-22T17:11:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.alsis.HomepageTest.checkReturnAddress() throws java.lang.InterruptedException]]>
+                <![CDATA[public void com.alsis.HomepageTest.testLinksSeq() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="checkReturnAddress()[pri:0, instance:com.alsis.HomepageTest@6950e31]" name="checkReturnAddress" duration-ms="3359" started-at="2020-03-20T11:39:25Z" finished-at="2020-03-20T11:39:28Z">
+        <test-method status="PASS" signature="testLinksSeq()[pri:0, instance:com.alsis.HomepageTest@1f983a6]" name="testLinksSeq" duration-ms="6707" started-at="2020-03-22T17:11:34Z" finished-at="2020-03-22T17:11:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkReturnAddress -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.alsis.HomepageTest@6950e31]" name="closeBrowser" is-config="true" duration-ms="4953" started-at="2020-03-20T11:39:28Z" finished-at="2020-03-20T11:39:33Z">
+        </test-method> <!-- testLinksSeq -->
+        <test-method status="PASS" signature="loadMenuForTesting()[pri:0, instance:com.alsis.HomepageTest@1f983a6]" name="loadMenuForTesting" is-config="true" duration-ms="0" started-at="2020-03-22T17:11:34Z" finished-at="2020-03-22T17:11:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadMenuForTesting -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.alsis.HomepageTest@1f983a6]" name="closeBrowser" is-config="true" duration-ms="4920" started-at="2020-03-22T17:11:41Z" finished-at="2020-03-22T17:11:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:com.alsis.HomepageTest@6950e31]" name="endReport" is-config="true" duration-ms="1317" started-at="2020-03-20T11:39:33Z" finished-at="2020-03-20T11:39:35Z">
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.alsis.HomepageTest@1f983a6]" name="endReport" is-config="true" duration-ms="463" started-at="2020-03-22T17:11:46Z" finished-at="2020-03-22T17:11:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
