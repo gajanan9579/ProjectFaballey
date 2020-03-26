@@ -23,12 +23,12 @@ public class Base {
 			
 			currDir = System.getProperty("user.dir");
 			prop = new Properties();
-			FileInputStream fis = new FileInputStream("C:\\Users\\hp\\git\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\propertiesfile\\config.properties");
+			FileInputStream fis = new FileInputStream("C:\\workspaceProject\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\propertiesfile\\config.properties");
 			prop.load(fis);
 
 			// log4j
 			log = Logger.getLogger(Base.class);
-			PropertyConfigurator.configure("C:\\Users\\hp\\git\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\propertiesfile\\log4j.properties");
+			PropertyConfigurator.configure("C:\\workspaceProject\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\propertiesfile\\log4j.properties");
 
 			log.info("currDir is : " + currDir);
 

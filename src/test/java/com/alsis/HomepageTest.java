@@ -22,7 +22,7 @@ public class HomepageTest extends TestBase {
 	
 	List<String> listMenuWeb;
 	List<String> listMenuExcel = null;
-	
+	public HomePage hp;
 	
 	@BeforeMethod
 	public void loadMenuForTesting() throws InterruptedException  {
@@ -30,6 +30,7 @@ public class HomepageTest extends TestBase {
 		Thread.sleep(3000);
 
 		driver.findElement(By.xpath("//a[text()='No Thanks']")).click();
+		hp=new HomePage(driver, test1);
 		/*By listXpath=By.xpath("//div[@class='menuCntr']/ul/li[@class]");
 		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/header/nav/div[1]/ul/li[4]/a")).click();
 		Thread.sleep(8000);
@@ -38,21 +39,24 @@ public class HomepageTest extends TestBase {
 		//System.out.println("The size of excelMenu="+listMenuExcel.size());
 	}
 
+<<<<<<< HEAD
 	/*@Test
+=======
+	@Test(priority=4)
+>>>>>>> 091526e7255df17fd2505fdc2ab425b1b7e1f157
 	public void checkHeadofficeAddress() throws InterruptedException {
-     HomePage hp=new HomePage(driver, test1);
-		Thread.sleep(3000);
+        
 		
-		driver.findElement(By.xpath("//a[@class='btnNoThanks']")).click();
+		
+		//driver.findElement(By.xpath("//a[@class='btnNoThanks']")).click();
 		Assert.assertTrue(CompeareText.compare(driver, hp.headofficeaddress,"Headofficeaddress1.txt"));
 
 	}
 
-	@Test
+	@Test(priority=5)
 	public void checkReturnAddress() throws InterruptedException {
-		 HomePage hp=new HomePage(driver, test1);
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//a[@class='btnNoThanks']")).click();
+// 		Thread.sleep(3000);
+// 		driver.findElement(By.xpath("//a[@class='btnNoThanks']")).click();F
 
 		Assert.assertTrue(CompeareText.compare(driver, hp.returnadd,"Returnadd.txt"));
 
@@ -62,8 +66,12 @@ public class HomepageTest extends TestBase {
 	@Test(priority=1)
 	public void testLinksCount() throws Exception {
 		
+<<<<<<< HEAD
 		ExtentLogsReport.info(test1,"Starting testLinksCount test ");
 		HomePage hp=new HomePage(driver, test1);
+=======
+		test1.info("Starting testLinksCount test ");
+>>>>>>> 091526e7255df17fd2505fdc2ab425b1b7e1f157
 		listMenuWeb=MenuUtil.getWebList(driver,hp.weblist);
 		listMenuExcel =ExcelReadWrite.getExcellist("MenuList.xlsx", "MenuSheet");
 		boolean condition=listMenuWeb.size()==listMenuExcel.size();
@@ -76,8 +84,12 @@ public class HomepageTest extends TestBase {
 
 	@Test(priority=2)
 	public void testLinksSeq() throws Exception {
+<<<<<<< HEAD
 		ExtentLogsReport.info(test1,"Starting testLinksSeq test");
 		HomePage hp=new HomePage(driver, test1);
+=======
+		test1.info("Starting testLinksSeq test");
+>>>>>>> 091526e7255df17fd2505fdc2ab425b1b7e1f157
 		listMenuWeb=MenuUtil.getWebList(driver,hp.weblist);
 		listMenuExcel = ExcelReadWrite.getExcellist("MenuList.xlsx", "MenuSheet");
 		//Assert.assertEquals(listMenuWeb,listMenuExcel);
@@ -102,8 +114,12 @@ public class HomepageTest extends TestBase {
 	}
 	/*@Test(dataProvider ="Menu",priority=3)
 	public void testLinkSpellings(String linkNameExcel) throws Exception {
+<<<<<<< HEAD
 		ExtentLogsReport.info(test1,"Starting testLinkSpellings test");
 		HomePage hp=new HomePage(driver, test1);
+=======
+		test1.info("Starting testLinkSpellings test");
+>>>>>>> 091526e7255df17fd2505fdc2ab425b1b7e1f157
 		listMenuWeb=MenuUtil.getWebList(driver,hp.weblist);
 		listMenuExcel = ExcelReadWrite.getExcellist("MenuList.xlsx", "MenuSheet");
 		boolean condition=listMenuWeb.contains(linkNameExcel);
