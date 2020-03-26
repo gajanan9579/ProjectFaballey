@@ -21,7 +21,7 @@ public class HomepageTest extends TestBase {
 	
 	List<String> listMenuWeb;
 	List<String> listMenuExcel = null;
-	
+	public HomePage hp;
 	
 	@BeforeMethod
 	public void loadMenuForTesting() throws InterruptedException  {
@@ -29,6 +29,7 @@ public class HomepageTest extends TestBase {
 		Thread.sleep(3000);
 
 		driver.findElement(By.xpath("//a[text()='No Thanks']")).click();
+		hp=new HomePage(driver, test1);
 		/*By listXpath=By.xpath("//div[@class='menuCntr']/ul/li[@class]");
 		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/header/nav/div[1]/ul/li[4]/a")).click();
 		Thread.sleep(8000);
@@ -39,7 +40,7 @@ public class HomepageTest extends TestBase {
 
 	@Test(priority=4)
 	public void checkHeadofficeAddress() throws InterruptedException {
-     HomePage hp=new HomePage(driver, test1);
+        
 		
 		
 		//driver.findElement(By.xpath("//a[@class='btnNoThanks']")).click();
@@ -49,7 +50,6 @@ public class HomepageTest extends TestBase {
 
 	@Test(priority=5)
 	public void checkReturnAddress() throws InterruptedException {
-		 HomePage hp=new HomePage(driver, test1);
 // 		Thread.sleep(3000);
 // 		driver.findElement(By.xpath("//a[@class='btnNoThanks']")).click();F
 
@@ -62,7 +62,6 @@ public class HomepageTest extends TestBase {
 	public void testLinksCount() throws Exception {
 		
 		test1.info("Starting testLinksCount test ");
-		HomePage hp=new HomePage(driver, test1);
 		listMenuWeb=MenuUtil.getWebList(driver,hp.weblist);
 		listMenuExcel = ExcelReadWrite.getExcellist("MenuList.xlsx", "MenuSheet");
 		boolean condition=listMenuWeb.size()==listMenuExcel.size();
@@ -74,7 +73,6 @@ public class HomepageTest extends TestBase {
 	@Test(priority=2)
 	public void testLinksSeq() throws Exception {
 		test1.info("Starting testLinksSeq test");
-		HomePage hp=new HomePage(driver, test1);
 		listMenuWeb=MenuUtil.getWebList(driver,hp.weblist);
 		listMenuExcel = ExcelReadWrite.getExcellist("MenuList.xlsx", "MenuSheet");
 		//Assert.assertEquals(listMenuWeb,listMenuExcel);
@@ -100,7 +98,6 @@ public class HomepageTest extends TestBase {
 	@Test(dataProvider ="Menu",priority=3)
 	public void testLinkSpellings(String linkNameExcel) throws Exception {
 		test1.info("Starting testLinkSpellings test");
-		HomePage hp=new HomePage(driver, test1);
 		listMenuWeb=MenuUtil.getWebList(driver,hp.weblist);
 		listMenuExcel = ExcelReadWrite.getExcellist("MenuList.xlsx", "MenuSheet");
 		boolean condition=listMenuWeb.contains(linkNameExcel);
