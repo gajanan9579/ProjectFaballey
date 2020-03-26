@@ -34,7 +34,7 @@ public class TestBase extends Base {
 	
 
 	public  WebDriver driver;
-	public  HomePage homePage;
+	//public  HomePage homePage;
 	
 	
 	
@@ -84,7 +84,7 @@ public class TestBase extends Base {
 		Thread.sleep(10000);
 		childtest=parenttest.createNode(method.getName());
 		test1=childtest;
-		homePage = new HomePage(driver,test1);
+		//homePage = new HomePage(driver,test1);
 		
 	}
 
