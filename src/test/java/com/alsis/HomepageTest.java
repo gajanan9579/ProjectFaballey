@@ -26,7 +26,7 @@ public class HomepageTest extends TestBase {
 	@BeforeMethod
 	public void loadMenuForTesting() throws InterruptedException  {
 		
-		
+		Thread.sleep(3000);
 
 		driver.findElement(By.xpath("//a[text()='No Thanks']")).click();
 		/*By listXpath=By.xpath("//div[@class='menuCntr']/ul/li[@class]");
@@ -37,21 +37,21 @@ public class HomepageTest extends TestBase {
 		//System.out.println("The size of excelMenu="+listMenuExcel.size());
 	}
 
-	@Test
+	@Test(priority=4)
 	public void checkHeadofficeAddress() throws InterruptedException {
      HomePage hp=new HomePage(driver, test1);
-		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//a[@class='btnNoThanks']")).click();
+		
+		//driver.findElement(By.xpath("//a[@class='btnNoThanks']")).click();
 		Assert.assertTrue(CompeareText.compare(driver, hp.headofficeaddress,"Headofficeaddress1.txt"));
 
 	}
 
-	@Test
+	@Test(priority=5)
 	public void checkReturnAddress() throws InterruptedException {
 		 HomePage hp=new HomePage(driver, test1);
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//a[@class='btnNoThanks']")).click();
+// 		Thread.sleep(3000);
+// 		driver.findElement(By.xpath("//a[@class='btnNoThanks']")).click();F
 
 		Assert.assertTrue(CompeareText.compare(driver, hp.returnadd,"Returnadd.txt"));
 
