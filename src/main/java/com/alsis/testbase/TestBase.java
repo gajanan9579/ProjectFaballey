@@ -61,13 +61,13 @@ public class TestBase extends Base {
 	public void openBrowser(Method method) throws InterruptedException {
 		String browserName = prop.getProperty("browser");
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\hp\\git\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\driver\\chromedriver78.exe");
+			System.setProperty("webdriver.chrome.driver","C:\\workspaceProject\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\driver\\chromedriver78.exe");
 
 			driver = new ChromeDriver();
 
 		} else if (browserName.equals("firefox")) {
 
-			System.setProperty("webdriver.geckodriver.driver","C:\\Users\\hp\\git\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\driver\\geckodriver64bit.exe");
+			System.setProperty("webdriver.geckodriver.driver","C:\\workspaceProject\\ProjectFaballey\\src\\resources\\java\\com\\alsis\\driver\\geckodriver64bit.exe");
 
 			driver = new FirefoxDriver();
 		}
