@@ -37,25 +37,25 @@ public class ScreenShot  {
 	}
 	
 	
-	public static void  extentScreenshot(WebDriver driver,ExtentTest test,String screenShotName,Status status) {
+	public static void  extentScreenshot(WebDriver driver,ThreadLocal<ExtentTest> test,String screenShotName,Status status) {
 		
 		String dateName= new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss").format(new Date());
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		
 		String destination=System.getProperty("user.dir")+"/TestsScreenshots/"+ screenShotName+dateName+".png";
-		File finalDestination= new File(destination);
+		/*File finalDestination= new File(destination);
 		try {
 			FileUtils.copyFile(source, finalDestination);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}*/
 		
 		
 		
 		try {
 			MediaEntityModelProvider mediaModel =MediaEntityBuilder.createScreenCaptureFromPath(destination).build();
-			test.log(status, "Screenshot For TestCase "+screenShotName, mediaModel);
+			test.get().log(status, screenShotName, mediaModel);
 			//childtest.log(Status.PASS,"Screenshot For TestCase "+screenShotName, mediaModel);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

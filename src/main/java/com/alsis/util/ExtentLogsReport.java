@@ -11,12 +11,13 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 public class ExtentLogsReport {
 	
+	
 
-	public static void IExtentResult(ExtentTest test, Object Actual, Object Expexted, String PassMessage,
+	public static void IExtentResult(ThreadLocal<ExtentTest> test, Object Actual, Object Expexted, String PassMessage,
 			String FailMessage, String SkipMessage, WebDriver driver,String PassScrnshot,String FailScrnshot) {
 		if (Actual.equals(Expexted)) {
 			
-			test.log(Status.PASS, PassMessage);
+			test.get().log(Status.PASS, PassMessage);
 			if(PassScrnshot.equals("YES")) {
 			ScreenShot.extentScreenshot(driver,test, "ScreenShot for Passed test", Status.PASS);
 			}
@@ -24,14 +25,14 @@ public class ExtentLogsReport {
 		} else if (!(Actual.equals(Expexted))) {
 			try {
 				
-				test.log(Status.FAIL, FailMessage);
+				test.get().log(Status.FAIL, FailMessage);
 				Markup m = MarkupHelper.createLabel(FailMessage, ExtentColor.RED);
-				test.log(Status.FAIL, m);
+				test.get().log(Status.FAIL, m);
 				Assert.assertEquals(Actual, Expexted);
 				
 				
 			} catch (Throwable e) {
-				test.log(Status.FAIL, e.fillInStackTrace());
+				test.get().log(Status.FAIL, e.fillInStackTrace());
 				
 			}
 			if(FailScrnshot.equals("YES")) {
@@ -39,58 +40,59 @@ public class ExtentLogsReport {
 			}
 			
 		} else {
-			test.log(Status.SKIP, SkipMessage);
+			test.get().log(Status.SKIP, SkipMessage);
 			
 		}
 		
 
 	}
 
-	public static void IExtentResult(ExtentTest test, boolean condition, String PassMessage,
+	public static void IExtentResult(ThreadLocal<ExtentTest> test, boolean condition, String PassMessage,
 			String FailMessage, String SkipMessage, WebDriver driver,String PassScrnshot,String FailScrnshot) {
 
-		if (condition==true) {
+		if (condition) {
 			
-		test.log(Status.PASS, PassMessage);
+			
+		  test.get().log(Status.PASS, PassMessage);
 			if(PassScrnshot.equals("YES")) {
 				ScreenShot.extentScreenshot(driver,test, "ScreenShot for Passed test", Status.PASS);
 				}		
 		} 
-		else if (condition == false) {
+		else if (!condition) {
             
 			try {
 				
-				test.log(Status.FAIL, FailMessage);
+				test.get().log(Status.FAIL, FailMessage);
 				Assert.assertEquals(condition, true);
 			}
 			catch(Throwable e) {
 				
-				test.log(Status.FAIL, e.fillInStackTrace());
+				test.get().log(Status.FAIL, e.fillInStackTrace());
 			}
 			if(FailScrnshot.equals("YES")) {
 				ScreenShot.extentScreenshot(driver,test, "ScreenShot for Failed test", Status.FAIL);
 			}
 		
 		}else {
-			test.log(Status.SKIP, SkipMessage);
+			test.get().log(Status.SKIP, SkipMessage);
 		}
 	
 }
 
-	public static void info(ExtentTest test, String message) {
-		test.log(Status.INFO, message);
+	public static void info(ThreadLocal<ExtentTest> test, String message) {
+		test.get().log(Status.INFO, message);
 		// test.info(message);
 	}
 
-	public static void pass(ExtentTest test, String message) {
-		test.log(Status.PASS, message);
+	public static void pass(ThreadLocal<ExtentTest> test, String message) {
+		test.get().log(Status.PASS, message);
 	}
 
-	public static void fail(ExtentTest test, String message) {
-		test.log(Status.FAIL, message);
+	public static void fail(ThreadLocal<ExtentTest> test, String message) {
+		test.get().log(Status.FAIL, message);
 	}
 
-	public static void skip(ExtentTest test, String message) {
-		test.log(Status.SKIP, message);
+	public static void skip(ThreadLocal<ExtentTest> test, String message) {
+		test.get().log(Status.SKIP, message);
 	}
 }

@@ -26,11 +26,12 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 public class TestBase extends Base {
 	
 	public static ExtentReports extent;
-	public static ExtentTest test1;
+	public static ThreadLocal<ExtentTest> test1;
 	public static ExtentTest parenttest;
 	public static ExtentTest childtest;
 	public static ExtentHtmlReporter htmlreporter;
 	public static SoftAssert soft;
+	public static ThreadLocal<ExtentTest>testReport;
 	
 
 	public  WebDriver driver;
@@ -44,6 +45,9 @@ public class TestBase extends Base {
 		  String FileName="ExtentReport_"+d.toString().replace(":", "_")+".html";
 		  htmlreporter= new ExtentHtmlReporter(currDir+"/reports/"+FileName);
 			extent=new ExtentReports(); 
+			 testReport=new ThreadLocal<ExtentTest>();
+			  test1=new ThreadLocal<ExtentTest>();
+			  
 			extent.attachReporter(htmlreporter);
 			extent.setSystemInfo("HostName", "HP");
 			extent.setSystemInfo("Enviroment", "QA");
@@ -54,6 +58,7 @@ public class TestBase extends Base {
 	 @BeforeClass
 	 public void parentSetup() throws Exception {
 		 parenttest= extent.createTest(getClass().getSimpleName());
+		 testReport.set(parenttest);
 		
 	 }
 
@@ -82,8 +87,8 @@ public class TestBase extends Base {
 		 */
 		driver.get(prop.getProperty("url"));
 		Thread.sleep(10000);
-		childtest=parenttest.createNode(method.getName());
-		test1=childtest;
+		childtest=testReport.get().createNode(method.getName());
+		test1.set(childtest);
 		homePage = new HomePage(driver,test1);
 		
 	}

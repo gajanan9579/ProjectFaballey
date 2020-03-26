@@ -7,7 +7,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 public class HomePage extends HomePageOR {
 
-	public HomePage(WebDriver driver, ExtentTest test) {
+	public HomePage(WebDriver driver, ThreadLocal<ExtentTest> test) {
 		super(driver, test);
 
 	}

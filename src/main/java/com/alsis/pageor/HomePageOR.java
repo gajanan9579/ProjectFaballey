@@ -12,7 +12,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 public class HomePageOR extends PageBase {
 
-	public HomePageOR(WebDriver driver, ExtentTest test) {
+	public HomePageOR(WebDriver driver, ThreadLocal<ExtentTest> test) {
 		super(driver, test);
 
 	}

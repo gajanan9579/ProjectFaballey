@@ -16,6 +16,7 @@ import com.alsis.util.CompeareText;
 import com.alsis.util.ExcelReadWrite;
 import com.alsis.util.ExtentLogsReport;
 import com.alsis.util.MenuUtil;
+import com.alsis.util.ScreenShot;
 
 public class HomepageTest extends TestBase {
 	
@@ -26,7 +27,7 @@ public class HomepageTest extends TestBase {
 	@BeforeMethod
 	public void loadMenuForTesting() throws InterruptedException  {
 		
-		
+		Thread.sleep(3000);
 
 		driver.findElement(By.xpath("//a[text()='No Thanks']")).click();
 		/*By listXpath=By.xpath("//div[@class='menuCntr']/ul/li[@class]");
@@ -37,7 +38,7 @@ public class HomepageTest extends TestBase {
 		//System.out.println("The size of excelMenu="+listMenuExcel.size());
 	}
 
-	@Test
+	/*@Test
 	public void checkHeadofficeAddress() throws InterruptedException {
      HomePage hp=new HomePage(driver, test1);
 		Thread.sleep(3000);
@@ -56,24 +57,26 @@ public class HomepageTest extends TestBase {
 		Assert.assertTrue(CompeareText.compare(driver, hp.returnadd,"Returnadd.txt"));
 
 	}
-	
+	*/
 
 	@Test(priority=1)
 	public void testLinksCount() throws Exception {
 		
-		test1.info("Starting testLinksCount test ");
+		ExtentLogsReport.info(test1,"Starting testLinksCount test ");
 		HomePage hp=new HomePage(driver, test1);
 		listMenuWeb=MenuUtil.getWebList(driver,hp.weblist);
-		listMenuExcel = ExcelReadWrite.getExcellist("MenuList.xlsx", "MenuSheet");
+		listMenuExcel =ExcelReadWrite.getExcellist("MenuList.xlsx", "MenuSheet");
 		boolean condition=listMenuWeb.size()==listMenuExcel.size();
 		ExtentLogsReport.IExtentResult(test1, condition, "testLinksCount test is passed", "testLinksCount test is failead", "testLinksCount test is skiped", driver, "YES", "YES");
-		test1.info("Ending testLinksCount test ");
+		ScreenShot.takeScreenshot(driver, "testLinksCount");
+		
+		ExtentLogsReport.info(test1, "Ending testLinksCount test ");
 		Assert.assertTrue(condition);
 	}
 
 	@Test(priority=2)
 	public void testLinksSeq() throws Exception {
-		test1.info("Starting testLinksSeq test");
+		ExtentLogsReport.info(test1,"Starting testLinksSeq test");
 		HomePage hp=new HomePage(driver, test1);
 		listMenuWeb=MenuUtil.getWebList(driver,hp.weblist);
 		listMenuExcel = ExcelReadWrite.getExcellist("MenuList.xlsx", "MenuSheet");
@@ -86,26 +89,26 @@ public class HomepageTest extends TestBase {
 					break;
 				}
 				ExtentLogsReport.IExtentResult(test1, condition, "testLinksSeq test is passed", "testLinksSeq test is failead", "testLinksSeq test is skiped", driver, "YES", "YES");
-				test1.info("Ending testLinksSeq test");
+				ExtentLogsReport.info(test1,"Ending testLinksSeq test");
 				Assert.assertTrue(condition);
 			}
 			
 			
 		}else {
 			ExtentLogsReport.IExtentResult(test1, false, "testLinksSeq test is passed", "testLinksSeq test is failead bcz size doesnt matched", "testLinksSeq test is skiped", driver, "YES", "YES");
-			test1.info("Ending testLinksSeq test");
+			ExtentLogsReport.info(test1,"Ending testLinksSeq test");
 			Assert.assertTrue(false);
 		}
 	}
-	@Test(dataProvider ="Menu",priority=3)
+	/*@Test(dataProvider ="Menu",priority=3)
 	public void testLinkSpellings(String linkNameExcel) throws Exception {
-		test1.info("Starting testLinkSpellings test");
+		ExtentLogsReport.info(test1,"Starting testLinkSpellings test");
 		HomePage hp=new HomePage(driver, test1);
 		listMenuWeb=MenuUtil.getWebList(driver,hp.weblist);
 		listMenuExcel = ExcelReadWrite.getExcellist("MenuList.xlsx", "MenuSheet");
 		boolean condition=listMenuWeb.contains(linkNameExcel);
 		ExtentLogsReport.IExtentResult(test1, condition, "testLinkSpellings test is passed", "testLinkSpellings test is failead", "testLinkSpellings test is skiped", driver, "YES", "YES");
-		test1.info("Ending testLinkSpellings test");
+		ExtentLogsReport.info(test1,"Ending testLinkSpellings test");
 		Assert.assertTrue(condition);
 	}
 
@@ -113,7 +116,7 @@ public class HomepageTest extends TestBase {
 	public Object[][] loginData() throws IOException {
 		Object[][] arrayObject =ExcelReadWrite.getData("MenuList.xlsx", "MenuSheet");
 		return arrayObject;
-	}
+	}*/
 
 	
 	
