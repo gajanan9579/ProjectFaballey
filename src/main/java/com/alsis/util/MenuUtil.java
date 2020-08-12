@@ -22,18 +22,18 @@ public class MenuUtil {
 				if(x!=0) {
 					e.getText();
 				}
-			}*/
-		
+			}
+		*/
 		
 		for(WebElement menu:listElements) {
 			int x=menu.getLocation().getX();
 			if(x!=0) {
 				
 			String text=menu.getText();
-			System.out.println(text);
+			//System.out.println(text);
 			menulist.add(text);
 			}
-		}System.out.println(menulist.size());
+		}System.out.println("Total numbers of menu items present "+menulist.size());
 		
 		return menulist;
 		

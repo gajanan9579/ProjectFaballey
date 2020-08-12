@@ -3,9 +3,9 @@
 <suite name="Suite" parallel="classes" thread-count="6">
   <test name="Test">
     <classes>
-      <class name="com.alsis.App"/>
+      <!-- <class name="com.alsis.App"/>
       <class name="com.alsis.App1"/>
-      <class name="com.alsis.App2"/>
+      <class name="com.alsis.App2"/> -->
        <class name="com.alsis.HomepageTest"/>
     </classes>
   </test> <!-- Test -->

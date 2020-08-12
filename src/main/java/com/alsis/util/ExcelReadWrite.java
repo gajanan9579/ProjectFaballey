@@ -42,16 +42,16 @@ public class ExcelReadWrite {
 		System.out.println("Row Count is: " + rowCount + "Column count is:  " + colCount);
 
 		Object data[][] = new Object[rowCount][colCount];
-		System.out.println("Size of arry= "+data.length);
+		//System.out.println("Size of arry= "+data.length);
 
 		for (int row =2; row <= rowCount+1; row++) {
 			for (int col = 0; col < colCount; col++) {
-				System.out.print(getCellData(sheetName, col, row) + " "); // print
+				System.out.print(getCellData(sheetName, col, row) + " is value from excel"); // print
 																			// Your
 																			// sheet
-				System.out.println("Before storing in to array");															// name
+				//System.out.println("Before storing in to array");															// name
 				data[row-2][col] = getCellData(sheetName, col, row); // stored
-				System.out.println("After storing in to array");													// Your
+				//System.out.println("After storing in to array");													// Your
 																		// sheet
 																		// name
 			}

@@ -23,7 +23,10 @@ public class HomePageOR extends PageBase {
 	@FindBy(xpath = "//div[@class='ftrtnBox']")
 	public WebElement returnadd;
 	
-	@FindAll({ @FindBy(xpath = "//div[@class='menuCntr']/ul/li[@class]")})
+	@FindAll({ @FindBy(xpath = "//div[@class='menuCntr']/ul/li[not(contains(@style, \"display:none\")) ]")})
 	public List<WebElement>weblist;
-
+	
+	@FindBy(xpath="//input[@id=\"SearchBox\" and @placeholder=\"Search\" ]")
+	public  WebElement searchbox;
+  
 }

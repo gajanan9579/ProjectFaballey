@@ -1,7 +1,10 @@
 package com.alsis.util;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -15,6 +18,9 @@ public class ExtentLogsReport {
 
 	public static void IExtentResult(ThreadLocal<ExtentTest> test, Object Actual, Object Expexted, String PassMessage,
 			String FailMessage, String SkipMessage, WebDriver driver,String PassScrnshot,String FailScrnshot) {
+		
+		
+		
 		if (Actual.equals(Expexted)) {
 			
 			test.get().log(Status.PASS, PassMessage);
@@ -43,14 +49,15 @@ public class ExtentLogsReport {
 			test.get().log(Status.SKIP, SkipMessage);
 			
 		}
+		}
 		
 
-	}
+	
 
 	public static void IExtentResult(ThreadLocal<ExtentTest> test, boolean condition, String PassMessage,
 			String FailMessage, String SkipMessage, WebDriver driver,String PassScrnshot,String FailScrnshot) {
 
-		if (condition) {
+		if (condition== true) {
 			
 			
 		  test.get().log(Status.PASS, PassMessage);
@@ -58,12 +65,12 @@ public class ExtentLogsReport {
 				ScreenShot.extentScreenshot(driver,test, "ScreenShot for Passed test", Status.PASS);
 				}		
 		} 
-		else if (!condition) {
+		else if (condition==false) {
             
 			try {
 				
 				test.get().log(Status.FAIL, FailMessage);
-				Assert.assertEquals(condition, true);
+				Assert.assertTrue(condition);
 			}
 			catch(Throwable e) {
 				
@@ -95,4 +102,9 @@ public class ExtentLogsReport {
 	public static void skip(ThreadLocal<ExtentTest> test, String message) {
 		test.get().log(Status.SKIP, message);
 	}
+
+
+
+
+	
 }

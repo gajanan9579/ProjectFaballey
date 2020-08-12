@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -22,7 +24,7 @@ public class HomepageTest extends TestBase {
 	
 	List<String> listMenuWeb;
 	List<String> listMenuExcel = null;
-	public HomePage hp;
+	//public HomePage hp;
 	
 	@BeforeMethod
 	public void loadMenuForTesting() throws InterruptedException  {
@@ -30,7 +32,7 @@ public class HomepageTest extends TestBase {
 		Thread.sleep(3000);
 
 		driver.findElement(By.xpath("//a[text()='No Thanks']")).click();
-		hp=new HomePage(driver, test1);
+	//	hp=new HomePage(driver, test1);
 		/*By listXpath=By.xpath("//div[@class='menuCntr']/ul/li[@class]");
 		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/header/nav/div[1]/ul/li[4]/a")).click();
 		Thread.sleep(8000);
@@ -39,93 +41,63 @@ public class HomepageTest extends TestBase {
 		//System.out.println("The size of excelMenu="+listMenuExcel.size());
 	}
 
-<<<<<<< HEAD
-	/*@Test
-=======
-	@Test(priority=4)
->>>>>>> 091526e7255df17fd2505fdc2ab425b1b7e1f157
-	public void checkHeadofficeAddress() throws InterruptedException {
+
+
+	/*@Test(priority=4)
+
+	public void checkHeadofficeAddress()  {
         
+		ExtentLogsReport.info(test1, "Starting checkHeadofficeAddress method");
+		ExtentLogsReport.IExtentResult(test1, hp.headOfficeAdress(), "checkHeadofficeAddress method is passed", "checkHeadofficeAddress method is failed", "checkHeadofficeAddress method is skipped", driver, "YES", "YES");
+		ExtentLogsReport.info(test1, "TestCase get ended");
 		
-		
-		//driver.findElement(By.xpath("//a[@class='btnNoThanks']")).click();
-		Assert.assertTrue(CompeareText.compare(driver, hp.headofficeaddress,"Headofficeaddress1.txt"));
+		Assert.assertTrue(hp.headOfficeAdress());
+
+	}*/
+
+	/*@Test(priority=5)
+	public void checkReturnAddress()  {
+		ExtentLogsReport.info(test1, "Starting chechReturnAdress method");
+		ExtentLogsReport.IExtentResult(test1, hp.returnadress(), "checkReturnAddress method is passed", "checkReturnAddress method is failed", "checkReturnAddress method is skipped", driver, "YES", "YES");
+		ExtentLogsReport.info(test1, "TestCase get ended");
+		Assert.assertTrue(hp.returnadress());
 
 	}
-
-	@Test(priority=5)
-	public void checkReturnAddress() throws InterruptedException {
-// 		Thread.sleep(3000);
-// 		driver.findElement(By.xpath("//a[@class='btnNoThanks']")).click();F
-
-		Assert.assertTrue(CompeareText.compare(driver, hp.returnadd,"Returnadd.txt"));
-
-	}
-	*/
+	  
 
 	@Test(priority=1)
-	public void testLinksCount() throws Exception {
+	public void testLinksCount() throws Exception  {
 		
-<<<<<<< HEAD
 		ExtentLogsReport.info(test1,"Starting testLinksCount test ");
-		HomePage hp=new HomePage(driver, test1);
-=======
-		test1.info("Starting testLinksCount test ");
->>>>>>> 091526e7255df17fd2505fdc2ab425b1b7e1f157
-		listMenuWeb=MenuUtil.getWebList(driver,hp.weblist);
-		listMenuExcel =ExcelReadWrite.getExcellist("MenuList.xlsx", "MenuSheet");
-		boolean condition=listMenuWeb.size()==listMenuExcel.size();
-		ExtentLogsReport.IExtentResult(test1, condition, "testLinksCount test is passed", "testLinksCount test is failead", "testLinksCount test is skiped", driver, "YES", "YES");
-		ScreenShot.takeScreenshot(driver, "testLinksCount");
-		
+		ExtentLogsReport.info(test1,"Actual size is " +listMenuWeb.size());
+		ExtentLogsReport.IExtentResult(test1, hp.countLinks(), "testLinksCount test is passed","testLinksCount test is failead","testLinksCount test is skiped", driver,"YES","YES");
 		ExtentLogsReport.info(test1, "Ending testLinksCount test ");
-		Assert.assertTrue(condition);
-	}
+		
+		Assert.assertTrue(hp.countLinks());
+		
+		
+	}*/
 
-	@Test(priority=2)
-	public void testLinksSeq() throws Exception {
-<<<<<<< HEAD
-		ExtentLogsReport.info(test1,"Starting testLinksSeq test");
-		HomePage hp=new HomePage(driver, test1);
-=======
-		test1.info("Starting testLinksSeq test");
->>>>>>> 091526e7255df17fd2505fdc2ab425b1b7e1f157
-		listMenuWeb=MenuUtil.getWebList(driver,hp.weblist);
-		listMenuExcel = ExcelReadWrite.getExcellist("MenuList.xlsx", "MenuSheet");
-		//Assert.assertEquals(listMenuWeb,listMenuExcel);
-		if(listMenuWeb.size()==listMenuExcel.size()) {
-			for(int i=0;i<listMenuWeb.size();i++) {
-				boolean condition=true;
-				if(!(listMenuWeb.get(i).equals(listMenuExcel.get(i)))) {
-					condition=false;
-					break;
-				}
-				ExtentLogsReport.IExtentResult(test1, condition, "testLinksSeq test is passed", "testLinksSeq test is failead", "testLinksSeq test is skiped", driver, "YES", "YES");
-				ExtentLogsReport.info(test1,"Ending testLinksSeq test");
-				Assert.assertTrue(condition);
-			}
-			
-			
-		}else {
-			ExtentLogsReport.IExtentResult(test1, false, "testLinksSeq test is passed", "testLinksSeq test is failead bcz size doesnt matched", "testLinksSeq test is skiped", driver, "YES", "YES");
-			ExtentLogsReport.info(test1,"Ending testLinksSeq test");
-			Assert.assertTrue(false);
-		}
-	}
-	/*@Test(dataProvider ="Menu",priority=3)
+	/*@Test//(priority=2)
+	public void testLinksSeq()  {
+		
+		ExtentLogsReport.info(test1,"Starting testLinksSeq test ");
+		ExtentLogsReport.IExtentResult(test1, hp.linkSeq(), "testLinksSeq test is passed", "testLinksSeq test is failed",
+				"testLinksSeq test is skiped", driver,"YES","YES");
+		ExtentLogsReport.info(test1, "Ending testLinksSeq test ");
+		Assert.assertTrue(hp.linkSeq());
+      }
+	
+	@Test(dataProvider ="Menu",priority=3)
 	public void testLinkSpellings(String linkNameExcel) throws Exception {
-<<<<<<< HEAD
+
 		ExtentLogsReport.info(test1,"Starting testLinkSpellings test");
-		HomePage hp=new HomePage(driver, test1);
-=======
-		test1.info("Starting testLinkSpellings test");
->>>>>>> 091526e7255df17fd2505fdc2ab425b1b7e1f157
-		listMenuWeb=MenuUtil.getWebList(driver,hp.weblist);
-		listMenuExcel = ExcelReadWrite.getExcellist("MenuList.xlsx", "MenuSheet");
-		boolean condition=listMenuWeb.contains(linkNameExcel);
-		ExtentLogsReport.IExtentResult(test1, condition, "testLinkSpellings test is passed", "testLinkSpellings test is failead", "testLinkSpellings test is skiped", driver, "YES", "YES");
+		ExtentLogsReport.info(test1,"Spelling  " +linkNameExcel);
+		ExtentLogsReport.IExtentResult(test1, hp.MenuSpellingCheck(linkNameExcel), "testLinkSpellings test is passed", "testLinkSpellings test is failead",
+				"testLinkSpellings test is skiped", driver, "YES", "YES");
 		ExtentLogsReport.info(test1,"Ending testLinkSpellings test");
-		Assert.assertTrue(condition);
+		
+		Assert.assertTrue(hp.MenuSpellingCheck(linkNameExcel));
 	}
 
 		@DataProvider(name = "Menu")
@@ -133,7 +105,31 @@ public class HomepageTest extends TestBase {
 		Object[][] arrayObject =ExcelReadWrite.getData("MenuList.xlsx", "MenuSheet");
 		return arrayObject;
 	}*/
-
+		
+	/*@Test
+	public void verifySearchBoxDisplayed() {
+		ExtentLogsReport.info(test1, "Starting verifySearchBoxDisplayed test");
+		ExtentLogsReport.IExtentResult(test1, hp.displaySerachboxbutton(), "verifySearchBoxDisplayed test is passed", "verifySearchBoxDisplayed test is failed", "verifySearchBoxDisplayed test is skipped", driver, "YES", "YES");
+		ExtentLogsReport.info(test1, "SearchBox is Present on HomePage");
+		ExtentLogsReport.info(test1, "verifySearchBoxDisplayed test is complited");
+		
+		Assert.assertTrue(hp.displaySerachboxbutton());
+		
+	}*/
 	
+	@Test
+	public void VerifySearchBoxClickable() {
+		ExtentLogsReport.info(test1, "Starting VerifySearchBoxClickable test");
+		ExtentLogsReport.IExtentResult(test1, homePage.clickableSearchBox(), "VerifySearchBoxClickable test is passed", "VerifySearchBoxClickable test is failed", "VerifySearchBoxClickable test is skipped", driver, "NO", "NO");
+		ExtentLogsReport.info(test1, "SearchBox is clickable on HomePage");
+		ExtentLogsReport.info(test1, "VerifySearchBoxClickable test is complited");
+		
+		Assert.assertTrue(homePage.clickableSearchBox());
+	}
+	
+	
+	
+	
+
 	
 }

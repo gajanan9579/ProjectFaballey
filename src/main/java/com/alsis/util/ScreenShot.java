@@ -44,12 +44,12 @@ public class ScreenShot  {
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		
 		String destination=System.getProperty("user.dir")+"/TestsScreenshots/"+ screenShotName+dateName+".png";
-		/*File finalDestination= new File(destination);
+		File finalDestination= new File(destination);
 		try {
 			FileUtils.copyFile(source, finalDestination);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}*/
+		}
 		
 		
 		

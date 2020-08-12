@@ -9,9 +9,9 @@
           <include name="loadProperties"/>
           <include name="parentSetup"/>
           <include name="closeBrowser"/>
+          <include name="VerifySearchBoxClickable"/>
           <include name="initialiseExtentReport"/>
           <include name="endReport"/>
-          <include name="testLinksSeq"/>
           <include name="openBrowser"/>
         </methods>
       </class> <!-- com.alsis.HomepageTest -->
