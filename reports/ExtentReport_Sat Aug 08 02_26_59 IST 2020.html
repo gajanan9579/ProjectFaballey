@@ -44,7 +44,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Mar 22, 2020 01:26:00 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 8, 2020 02:26:59 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -103,10 +103,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>3</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -117,10 +117,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='25%'><span class='strong'>1</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>3</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='75%'>3</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -138,24 +138,79 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>App</span>
+						<span class='test-time'>Aug 8, 2020 02:26:59 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 8, 2020 02:26:59 AM</span>
+	<span class='label end-time'>Aug 8, 2020 02:27:50 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 51s+270ms</span>
+</div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1 leaf pass' status='pass' test-id='7'>
+		<div class='collapsible-header'>
+			<div class='node-name'>m1</div>
+			<span class='node-time'>Aug 8, 2020 02:27:50 AM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+84ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:27:50 AM</td>
+							<td class='step-details'>
+									Hell World
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:27:50 AM</td>
+							<td class='step-details'>
+									Online Fashion Store - Online Shopping Site for Women in India - FabAlley
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+</ul>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='2'>
 					<div class='test-heading'>
 						<span class='test-name'>HomepageTest</span>
-						<span class='test-time'>Mar 22, 2020 01:26:00 PM</span>
+						<span class='test-time'>Aug 8, 2020 02:26:59 AM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Mar 22, 2020 01:26:00 PM</span>
-	<span class='label end-time'>Mar 22, 2020 01:30:36 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 4m 36s+523ms</span>
+	<span class='label start-time'>Aug 8, 2020 02:26:59 AM</span>
+	<span class='label end-time'>Aug 8, 2020 02:27:55 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 55s+741ms</span>
 </div>
 <ul class='collapsible node-list' data-collapsible='accordion'>
-	<li class='node level-1 leaf fail' status='fail' test-id='2'>
+	<li class='node level-1 leaf fail' status='fail' test-id='5'>
 		<div class='collapsible-header'>
 			<div class='node-name'>testLinksCount</div>
-			<span class='node-time'>Mar 22, 2020 01:27:25 PM</span>
-			&middot; <span class='node-duration'>0h 0m 3s+81ms</span>
+			<span class='node-time'>Aug 8, 2020 02:27:46 AM</span>
+			&middot; <span class='node-duration'>0h 0m 8s+737ms</span>
 			<span class='test-status right fail'>fail</span>
 		</div>
 		<div class='collapsible-body'>
@@ -169,9 +224,17 @@
 						</tr>
 					</thead>
 					<tbody>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:27:50 AM</td>
+							<td class='step-details'>
+									Starting testLinksCount test
+								
+							</td>
+						</tr>
 						<tr class='log' status='fail'>
 							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-							<td class='timestamp'>1:27:27 PM</td>
+							<td class='timestamp'>2:27:54 AM</td>
 							<td class='step-details'>
 									testLinksCount test is failead
 								
@@ -179,11 +242,11 @@
 						</tr>
 						<tr class='log' status='fail'>
 							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-							<td class='timestamp'>1:27:27 PM</td>
+							<td class='timestamp'>2:27:54 AM</td>
 							<td class='step-details'>
 									<pre>java.lang.AssertionError: expected [true] but found [false]
-	at com.alsis.util.ExtentLogsReport.IExtentResult(ExtentLogsReport.java:68)
-	at com.alsis.HomepageTest.testLinksCount(HomepageTest.java:68)
+	at com.alsis.util.ExtentLogsReport.IExtentResult(ExtentLogsReport.java:77)
+	at com.alsis.HomepageTest.testLinksCount(HomepageTest.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -194,30 +257,19 @@
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
 </pre>
 								
 							</td>
 						</tr>
 						<tr class='log' status='fail'>
 							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-							<td class='timestamp'>1:27:28 PM</td>
+							<td class='timestamp'>2:27:55 AM</td>
 							<td class='step-details'>
-									Screenshot For TestCase ScreenShot for Failed test
-								<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Failed test2020_03_22_01_27_27.png' src='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Failed test2020_03_22_01_27_27.png' data-src='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Failed test2020_03_22_01_27_27.png'>
+									ScreenShot for Failed test
+								<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Failed test2020_08_08_02_27_54.png' src='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Failed test2020_08_08_02_27_54.png' data-src='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Failed test2020_08_08_02_27_54.png'>
 							</td>
 						</tr>
 					</tbody>
@@ -225,159 +277,27 @@
 			</div>
 		</div>
 	</li>
-	<li class='node level-1 leaf fail' status='fail' test-id='3'>
+</ul>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>App2</span>
+						<span class='test-time'>Aug 8, 2020 02:26:59 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 8, 2020 02:26:59 AM</span>
+	<span class='label end-time'>Aug 8, 2020 02:27:47 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 47s+864ms</span>
+</div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1 leaf pass' status='pass' test-id='6'>
 		<div class='collapsible-header'>
-			<div class='node-name'>testLinksSeq</div>
-			<span class='node-time'>Mar 22, 2020 01:28:28 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+9ms</span>
-			<span class='test-status right fail'>fail</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='fail'>
-							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-							<td class='timestamp'>1:28:32 PM</td>
-							<td class='step-details'>
-									testLinksSeq test is failead bcz size doesnt matched
-								
-							</td>
-						</tr>
-						<tr class='log' status='fail'>
-							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-							<td class='timestamp'>1:28:32 PM</td>
-							<td class='step-details'>
-									<pre>java.lang.AssertionError: expected [true] but found [false]
-	at com.alsis.util.ExtentLogsReport.IExtentResult(ExtentLogsReport.java:68)
-	at com.alsis.HomepageTest.testLinksSeq(HomepageTest.java:91)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre>
-								
-							</td>
-						</tr>
-						<tr class='log' status='fail'>
-							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-							<td class='timestamp'>1:28:32 PM</td>
-							<td class='step-details'>
-									Screenshot For TestCase ScreenShot for Failed test
-								<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Failed test2020_03_22_01_28_32.png' src='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Failed test2020_03_22_01_28_32.png' data-src='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Failed test2020_03_22_01_28_32.png'>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf fail' status='fail' test-id='4'>
-		<div class='collapsible-header'>
-			<div class='node-name'>testLinkSpellings</div>
-			<span class='node-time'>Mar 22, 2020 01:29:43 PM</span>
-			&middot; <span class='node-duration'>0h 0m 3s+1ms</span>
-			<span class='test-status right fail'>fail</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='fail'>
-							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-							<td class='timestamp'>1:29:45 PM</td>
-							<td class='step-details'>
-									testLinkSpellings test is failead
-								
-							</td>
-						</tr>
-						<tr class='log' status='fail'>
-							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-							<td class='timestamp'>1:29:45 PM</td>
-							<td class='step-details'>
-									<pre>java.lang.AssertionError: expected [true] but found [false]
-	at com.alsis.util.ExtentLogsReport.IExtentResult(ExtentLogsReport.java:68)
-	at com.alsis.HomepageTest.testLinkSpellings(HomepageTest.java:101)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre>
-								
-							</td>
-						</tr>
-						<tr class='log' status='fail'>
-							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-							<td class='timestamp'>1:29:46 PM</td>
-							<td class='step-details'>
-									Screenshot For TestCase ScreenShot for Failed test
-								<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Failed test2020_03_22_01_29_45.png' src='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Failed test2020_03_22_01_29_45.png' data-src='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Failed test2020_03_22_01_29_45.png'>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='5'>
-		<div class='collapsible-header'>
-			<div class='node-name'>testLinkSpellings</div>
-			<span class='node-time'>Mar 22, 2020 01:30:35 PM</span>
-			&middot; <span class='node-duration'>0h 0m 1s+174ms</span>
+			<div class='node-name'>m3</div>
+			<span class='node-time'>Aug 8, 2020 02:27:47 AM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+78ms</span>
 			<span class='test-status right pass'>pass</span>
 		</div>
 		<div class='collapsible-body'>
@@ -393,18 +313,57 @@
 					<tbody>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>1:30:36 PM</td>
+							<td class='timestamp'>2:27:47 AM</td>
 							<td class='step-details'>
-									testLinkSpellings test is passed
+									Online Fashion Store - Online Shopping Site for Women in India - FabAlley
 								
 							</td>
 						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+</ul>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>App1</span>
+						<span class='test-time'>Aug 8, 2020 02:26:59 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 8, 2020 02:26:59 AM</span>
+	<span class='label end-time'>Aug 8, 2020 02:27:52 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 52s+999ms</span>
+</div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1 leaf pass' status='pass' test-id='8'>
+		<div class='collapsible-header'>
+			<div class='node-name'>m2</div>
+			<span class='node-time'>Aug 8, 2020 02:27:52 AM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+142ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>1:30:36 PM</td>
+							<td class='timestamp'>2:27:52 AM</td>
 							<td class='step-details'>
-									Screenshot For TestCase ScreenShot for Passed test
-								<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Passed test2020_03_22_01_30_36.png' src='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Passed test2020_03_22_01_30_36.png' data-src='C:\Users\hp\git\ProjectFaballey/TestsScreenshots/ScreenShot for Passed test2020_03_22_01_30_36.png'>
+									https://www.faballey.com/
+								
 							</td>
 						</tr>
 					</tbody>
@@ -457,7 +416,7 @@
 				<li class='exception displayed active'>
 					<div class='exception-heading'>
 						<span class='exception-name'>java.lang.AssertionError</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>3</span></span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
 					</div>
 					<div class='exception-content hide'>
 						<div class='exception-tests'>
@@ -471,12 +430,12 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 22, 2020 01:27:25 PM</td>
-										<td class='linked' test-id='2'>HomepageTest.testLinksCount</td>
+										<td>Aug 8, 2020 02:27:46 AM</td>
+										<td class='linked' test-id='5'>HomepageTest.testLinksCount</td>
 										<td>
 											<pre>java.lang.AssertionError: expected [true] but found [false]
-	at com.alsis.util.ExtentLogsReport.IExtentResult(ExtentLogsReport.java:68)
-	at com.alsis.HomepageTest.testLinksCount(HomepageTest.java:68)
+	at com.alsis.util.ExtentLogsReport.IExtentResult(ExtentLogsReport.java:77)
+	at com.alsis.HomepageTest.testLinksCount(HomepageTest.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -487,88 +446,9 @@
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre>
-										</td>
-									</tr>
-									<tr>
-										<td>Mar 22, 2020 01:28:28 PM</td>
-										<td class='linked' test-id='3'>HomepageTest.testLinksSeq</td>
-										<td>
-											<pre>java.lang.AssertionError: expected [true] but found [false]
-	at com.alsis.util.ExtentLogsReport.IExtentResult(ExtentLogsReport.java:68)
-	at com.alsis.HomepageTest.testLinksSeq(HomepageTest.java:91)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre>
-										</td>
-									</tr>
-									<tr>
-										<td>Mar 22, 2020 01:29:43 PM</td>
-										<td class='linked' test-id='4'>HomepageTest.testLinkSpellings</td>
-										<td>
-											<pre>java.lang.AssertionError: expected [true] but found [false]
-	at com.alsis.util.ExtentLogsReport.IExtentResult(ExtentLogsReport.java:68)
-	at com.alsis.HomepageTest.testLinkSpellings(HomepageTest.java:101)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
 </pre>
 										</td>
 									</tr>
@@ -594,7 +474,7 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -606,13 +486,13 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 22, 2020 01:26:00 PM</div>
+					<div class='panel-lead'>Aug 8, 2020 02:26:59 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 22, 2020 01:26:00 PM</div>
+			 		<div class='panel-lead'>Aug 8, 2020 02:26:59 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -653,7 +533,7 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-				passParent: 0,
+				passParent: 3,
 				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
@@ -661,15 +541,15 @@
 				skipParent: 0,
 				exceptionsParent: 1,
 				
-				passChild: 1,
-				failChild: 3,
+				passChild: 3,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 3,
+				exceptionsChild: 1,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,
@@ -684,7 +564,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "HomepageTest":276.523
+			        "App":51.27,"HomepageTest":55.741,"App2":47.864,"App1":52.999
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/master/v3html/js/extent.js' type='text/javascript'></script>

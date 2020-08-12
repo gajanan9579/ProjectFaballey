@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="6" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
+  <test name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="com.alsis.HomepageTest">
+        <methods>
+          <include name="loadMenuForTesting"/>
+          <include name="loadProperties"/>
+          <include name="parentSetup"/>
+          <include name="closeBrowser"/>
+          <include name="initialiseExtentReport"/>
+          <include name="endReport"/>
+          <include name="testLinksSeq"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.alsis.HomepageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
